@@ -87,9 +87,9 @@ class Login extends Component {
           onSubmit={(e) => this.handle_signin(e, this.state)}
         >
           <Box style={styles.formContainer}>
-            <Typography variant="h4" component="div" gutterBottom style={styles.title} >
+            {/* <Typography variant="h4" component="div" gutterBottom style={styles.title} >
               Coal India Limited
-            </Typography>
+            </Typography> */}
             <p style={{textAlign: 'left'}}>User Name</p>
             <TextField
               // label="User Name"

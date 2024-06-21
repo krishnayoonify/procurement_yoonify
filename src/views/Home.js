@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { AppBar, Toolbar, Typography, Button, Box, Container, Grid, Modal, Backdrop, Fade, TextField } from '@mui/material';
-import Frame1 from './f1.png';
-import Frame2 from './f2.png';
-import Frame3 from './f3.png';
-import Frame4 from './f4.png';
+import Frame1 from './Frame1New.jpg';
+import Frame2 from './frame2New.jpg';
+import Frame4 from './frame3New.jpg';
+import Frame3 from './frame4New.jpg';
 import { IconFileUpload } from "@tabler/icons";
 import { S3Client, PutObjectCommand } from "@aws-sdk/client-s3";
 import { updateAnyUserState, loginUser } from "../store/actions/userActions";
