@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Box, TextField, Button, Link, Typography } from '@mui/material';
-import loginImg from "./Rectangle9486.png";
+import loginImg from "./AI.jpg";
 import { updateAnyUserState, loginUser } from "../../store/actions/userActions";
 import { connect } from "react-redux";
 class Login extends Component {

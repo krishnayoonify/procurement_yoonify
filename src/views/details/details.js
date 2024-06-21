@@ -23,7 +23,7 @@ import { Info, Link as LinkIcon } from '@mui/icons-material';
 import { UploadFile as UploadIcon } from '@mui/icons-material';
 import CircularProgress from '@mui/material/CircularProgress';
 import Frame1 from './5.jpg';
-import Frame2 from './1.jpg';
+import Frame2 from './AI.jpg';
 
 import Frame2N from './2. Office team is working.jpg';
 import Frame3N from './3. AI Enabled system.png';
