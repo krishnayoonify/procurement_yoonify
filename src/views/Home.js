@@ -203,22 +203,22 @@ handleNameChange = (event) => {
               <Grid container spacing={2} style={styles.imageGrid}>
                 <Grid item xs={6}>
                   <Box style={{ width: '100%', height: '260px', borderRadius: '25px', boxShadow: '15px 14px 20px 0 #00000057' }}>
-                    <img src={Frame1} alt="yoonify" style={{ width: '100%', height: '260px', borderRadius: '25px' }} />
+                    <img src={Frame1} alt="yoonify" style={{ width: '115%', height: '260px', borderRadius: '25px' }} />
                   </Box>
                 </Grid>
                 <Grid item xs={6}>
-                  <Box style={{ width: '100%', height: '260px', borderRadius: '25px', marginTop: '40px', boxShadow: '15px 14px 20px 0 #00000057' }} >
-                    <img src={Frame2} alt="yoonify" style={{ width: '100%', height: '260px', borderRadius: '25px' }} />
+                  <Box style={{ width: '100%', height: '260px', borderRadius: '25px', marginTop: '40px', boxShadow: '15px 14px 20px 0 #00000057',marginLeft:'50px' }} >
+                    <img src={Frame2} alt="yoonify" style={{ width: '115%', height: '260px', borderRadius: '25px' }} />
                   </Box>
                 </Grid>
                 <Grid item xs={6}>
                   <Box style={{ width: '100%', height: '260px', borderRadius: '25px', marginTop: '-25px', boxShadow: '15px 14px 20px 0 #00000057' }} >
-                    <img src={Frame3} alt="yoonify" style={{ width: '100%', height: '260px', borderRadius: '25px' }} />
+                    <img src={Frame3} alt="yoonify" style={{ width: '115%', height: '260px', borderRadius: '25px' }} />
                   </Box>
                 </Grid>
                 <Grid item xs={6}>
-                  <Box style={{ width: '100%', height: '260px', borderRadius: '25px', marginTop: '10px', boxShadow: '15px 14px 20px 0 #00000057' }} >
-                    <img src={Frame4} alt="yoonify" style={{ width: '100%', height: '260px', borderRadius: '25px' }} />
+                  <Box style={{ width: '100%', height: '260px', borderRadius: '25px', marginTop: '10px', boxShadow: '15px 14px 20px 0 #00000057', marginLeft:'50px' }} >
+                    <img src={Frame4} alt="yoonify" style={{ width: '115%', height: '260px', borderRadius: '25px' }} />
                   </Box>
                 </Grid>
               </Grid>
