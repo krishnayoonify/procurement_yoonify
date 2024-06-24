@@ -187,6 +187,32 @@ class Content extends React.Component {
       .then(data => {
         this.setState({ item: data.item });
         this.updateAvailableTabs(data.item);
+
+        if (data.item.vendors && data.item.vendors.length > 0) {
+          const lastVendor = data.item.vendors[data.item.vendors.length - 1];
+          for (const criteriaId in lastVendor.responses) {
+            const responses = lastVendor.responses;
+
+            let trueCount = 0;
+            let totalCount = 0;
+
+            // Iterate over responses
+            for (const criteriaId in responses) {
+              totalCount++;
+              if (responses[criteriaId].category_complete === true) {
+                trueCount++;
+              }
+            }
+
+            // Calculate percentage
+            let percentage = 0;
+            if (totalCount > 0) {
+              percentage = (trueCount / totalCount) * 100;
+            }
+            this.setState({percentage:percentage})
+          } 
+          
+        }
       })
       .catch(error => {
         console.error('Error fetching tender data:', error);
@@ -740,7 +766,13 @@ renderComparisionTable = (item) => {
                   {item && item.tender_info && item.tender_info?.tender_date && <Grid item xs={6} mt={2} style={{ textAlign: 'right' }}>
                     <Typography variant="h5">{item && item.tender_info && item.tender_info?.tender_date}</Typography>
                   </Grid>}
-                  {item && item.tender_info && item.tender_info?.tender_value && <Grid item xs={6} mt={2}>
+                  {item && item.tender_info && item.tender_info?.tender_number && <Grid item xs={6} mt={2}>
+                    <Typography variant="body2" fontWeight='Bold'>Tender Name:</Typography>
+                  </Grid>}
+                  {item && item.tender_info && item.tender_info?.tender_number && <Grid item xs={6} mt={2} style={{ textAlign: 'right' }}>
+                    <Typography variant="h5">{item && item.tender_info && item.tender_info?.tender_number}</Typography>
+                  </Grid>}
+                  {/* {item && item.tender_info && item.tender_info?.tender_value && <Grid item xs={6} mt={2}>
                     <Typography variant="body2" fontWeight='Bold'>Tender Value:</Typography>
                   </Grid>}
                   {item && item.tender_info && item.tender_info?.tender_value && <Grid item xs={6} mt={2} style={{ textAlign: 'right' }}>
@@ -751,7 +783,7 @@ renderComparisionTable = (item) => {
                   </Grid>}
                   {item && item.tender_info && item.tender_info?.tender_deposit && <Grid item xs={6} mt={2} style={{ textAlign: 'right' }}>
                     <Typography variant="h5">{item && item.tender_info && item.tender_info?.tender_deposit}</Typography>
-                  </Grid>}
+                  </Grid>} */}
                 </Grid>
               </>}
             </Paper>
